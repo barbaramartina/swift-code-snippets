@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>testKVO</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>   func testKVOExpectation() {
+        // Make sure you have the following vars in your test case class:
+        //        var asyncOperation1: MyAsynchronousOperation? // your operation
+        //        var queue1: NSOperationQueue?
+        keyValueObservingExpectationForObject(asyncOperation1!, keyPath: "isExecuting", expectedValue: true)
+        
+        queue1!.addOperation(asyncOperation1!)
+        
+        waitForExpectationsWithTimeout(10.0) { error in
+            // TODO: make your assertions
+        }
+        
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E2453E75-F02C-404E-AAB5-5085D25C0ABD</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Unit test function to observe changes using KVO</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift Unit Test for KVO properties</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

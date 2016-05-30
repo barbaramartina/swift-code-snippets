@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>operationSynch</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+
+
+//
+//  MySynchronousOperation.swift
+//  operationqueues
+//
+//  Created by Barbara Rodeker on 3/3/16.
+//  Copyright © 2016 Barbara M. Rodeker. All rights reserved.
+//
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+//
+
+import Foundation
+
+class MySynchronousOperation: NSOperation {
+    
+    
+    override func main() {
+        if self.cancelled {
+            return
+        }
+        
+        // do some processing
+        
+        // cancelled should be checked periodically
+        // From Apple Documentation: In particular, your main task code should periodically check the value of the cancelled property. If the property reports the value true, your operation object should clean up and exit as quickly as possible
+        // https://developer.apple.com/library/mac/documentation/Cocoa/Reference/NSOperation_class/#//apple_ref/doc/uid/TP40004591-RH2-SW18
+        
+        if self.cancelled {
+            return
+        }
+        
+        // do more processing
+    }
+}
+
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E153DD37-2DC7-408B-9DD1-F95DDDD0C9F3</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Template with docs to implement a non-concurrent subclass of NSOperation</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift NSOperation Synchronous Subclass</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

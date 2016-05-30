@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>testNotifications</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>   func testNotification() {
+        expectationForNotification(UIDeviceBatteryLevelDidChangeNotification, object: UIDevice.currentDevice()) { (NSNotification) -&gt; Bool in
+            //TODO: do something to check if the notifications brings i.e the information you need OR DO NOT USE A CALLBACK AT ALL, and the result will be true as ong as the notification is raised.
+            let isNotificationAsExpected = true
+            return isNotificationAsExpected
+        }
+
+        //DO something to trigger UIDeviceBatteryLevelDidChangeNotification
+
+        waitForExpectationsWithTimeout(10.0) { error in
+            // Make your assertions
+        }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>FA9D72B4-3752-4EF8-B87F-C8DEAE818826</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Unit test function to check if a notification was properly triggered</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Swift Unit Test for notifications</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
