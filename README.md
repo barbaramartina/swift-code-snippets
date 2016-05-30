@@ -2,8 +2,9 @@
 **Sharing my code snippets for XCode and Swift.**
 
 Checkout also these repos for more snippets:  
-1. [burczyc](https://github.com/burczyk/XcodeSwiftSnippets)
-2. [Mattt](https://github.com/Xcode-Snippets/Swift). This last one still does not have any snippet for Swift and can not be forked yet, but I'm sure cool reusable snippets will appear soon there.
+1. [burczyc](https://github.com/burczyk/XcodeSwiftSnippets)  
+2. [Mattt](https://github.com/Xcode-Snippets/Swift).  
+This last one still does not have any snippet for Swift and can not be forked yet, but I'm sure cool reusable snippets will appear soon there.
 
 # Create  
 Select your code, drag&drop to the **Snippets Library**, at the bottom of the Utility Panel (at the right).
