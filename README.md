@@ -2,17 +2,12 @@
 **Sharing code snippets for XCode and Swift.**
 
 # Create  
-Select your code, drag&drop to the **Snippets Library**.  
-
-![create](https://github.com/barbaramartina/swift-code-snippets/blob/master/docs/create%20snippet.gif)
-
+Select your code, drag&drop to the **Snippets Library**, at the bottom of the Utility Panel (at the right).
 
 # Share  
 Find your local snippets and share, going to:  
 
     ~/Library/Developer/Xcode/UserData/CodeSnippets  
-    
-![see snippets](https://github.com/barbaramartina/swift-code-snippets/blob/master/docs/see-snippets.gif)
 
 # Install  
 
