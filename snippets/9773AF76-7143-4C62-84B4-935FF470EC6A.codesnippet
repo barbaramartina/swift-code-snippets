@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>operationAsynch</string>
+	<string>bmr-operationAsynch</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>TopLevel</string>
@@ -146,6 +146,8 @@ class MyAsynchronousOperation: NSOperation {
 	<string>9773AF76-7143-4C62-84B4-935FF470EC6A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
 	<string>Template class with documentation links to implement a concurrent NSOperation subclass</string>
 	<key>IDECodeSnippetTitle</key>

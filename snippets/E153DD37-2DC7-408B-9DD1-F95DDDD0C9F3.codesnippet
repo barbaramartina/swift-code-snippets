@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>operationSynch</string>
+	<string>bmr-operationSynch</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>TopLevel</string>
@@ -63,6 +63,8 @@ class MySynchronousOperation: NSOperation {
 	<string>E153DD37-2DC7-408B-9DD1-F95DDDD0C9F3</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
 	<string>Template with docs to implement a non-concurrent subclass of NSOperation</string>
 	<key>IDECodeSnippetTitle</key>
