@@ -1,15 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>bmr-operationSynch</string>
-	<key>IDECodeSnippetCompletionScopes</key>
-	<array>
-		<string>TopLevel</string>
-	</array>
-	<key>IDECodeSnippetContents</key>
-	<string>
+---
+title: Swift NSOperation Synchronous Subclass
+completion-scope: TopLevel
+summary: Template with docs to implement a non-concurrent subclass of NSOperation
+platform: iphoneos
+--- 
+
 
 
 //
@@ -30,7 +25,7 @@
 //  GNU General Public License for more details.
 //
 //  You should have received a copy of the GNU General Public License
-//  along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
 import Foundation
@@ -58,20 +53,4 @@ class MySynchronousOperation: NSOperation {
 }
 
 
-</string>
-	<key>IDECodeSnippetIdentifier</key>
-	<string>E153DD37-2DC7-408B-9DD1-F95DDDD0C9F3</string>
-	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>Template with docs to implement a non-concurrent subclass of NSOperation</string>
-	<key>IDECodeSnippetTitle</key>
-	<string>Swift NSOperation Synchronous Subclass</string>
-	<key>IDECodeSnippetUserSnippet</key>
-	<true/>
-	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
-</dict>
-</plist>
+

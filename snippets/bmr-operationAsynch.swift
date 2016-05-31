@@ -1,15 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>bmr-operationAsynch</string>
-	<key>IDECodeSnippetCompletionScopes</key>
-	<array>
-		<string>TopLevel</string>
-	</array>
-	<key>IDECodeSnippetContents</key>
-	<string>
+---
+title: Swift NSOperation Subclass Asynchronous
+completion-scope: TopLevel
+summary: Template class with documentation links to implement a concurrent NSOperation subclass
+platform: iphoneos
+--- 
+
 
 //
 //  This is an implemenation of an asynchronous operation subclass.
@@ -45,7 +40,7 @@
 //  GNU General Public License for more details.
 //
 //  You should have received a copy of the GNU General Public License
-//  along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
 import Foundation
@@ -60,7 +55,7 @@ class MyAsynchronousOperation: NSOperation {
     
     enum State {
         case Ready, Executing, Finished
-        func keyPath() -&gt; String {
+        func keyPath() -> String {
             switch self {
             case Ready:
                 return "isReady"
@@ -125,7 +120,7 @@ class MyAsynchronousOperation: NSOperation {
     // MARK: - NSOperation
     
     override var ready: Bool {
-        return super.ready &amp;&amp; state == .Ready
+        return super.ready && state == .Ready
     }
     
     override var executing: Bool {
@@ -141,20 +136,4 @@ class MyAsynchronousOperation: NSOperation {
     }
     
 }
-</string>
-	<key>IDECodeSnippetIdentifier</key>
-	<string>9773AF76-7143-4C62-84B4-935FF470EC6A</string>
-	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>Template class with documentation links to implement a concurrent NSOperation subclass</string>
-	<key>IDECodeSnippetTitle</key>
-	<string>Swift NSOperation Subclass Asynchronous</string>
-	<key>IDECodeSnippetUserSnippet</key>
-	<true/>
-	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
-</dict>
-</plist>
+
