@@ -3,40 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>bmr-testAsync</string>
+	<string>bmr-collectionviewdelegate</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    func testAsynch() {
-        let expectation = expectationWithDescription("Asynch execution should finish")
+	<string>    //MARK: UICollectionViewDelegate
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        // Do something asynch and fulfill the expectation when finished
-      
-        
-        waitForExpectationsWithTimeout(10.0) { error in
-            if let e = error {
-                XCTFail("Test did not finish \(e)")
-            } else {
-                XCTAssertTrue(true)
-            }
-        }
     }
-</string>
+    
+    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+        
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D64F86B5-5974-47E0-AFBA-903D6C75AB8D</string>
+	<string>C66A514B-46CB-418A-BC0A-29DD0340216E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Unit test function with expectations</string>
+	<string>Required methods when you implement a collection view delegate</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift Unit Test Asynchronous</string>
+	<string>Swift UIKit CollectionViewDelegate</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

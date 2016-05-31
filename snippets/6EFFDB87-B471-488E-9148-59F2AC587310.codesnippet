@@ -30,7 +30,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string>Code template for observing KVO changes</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift Observing Values</string>
+	<string>Swift KVO Observing Values</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

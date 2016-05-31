@@ -3,27 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>bmr-addKVOObserver</string>
+	<string>bmr-gcd-asyncMainQueue</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>       queue.addObserver(self, forKeyPath: "operations", options: .New, context: nil)
- </string>
+	<string>       dispatch_async(dispatch_get_main_queue(), { () -&gt; Void in
+            
+        })</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>28A42D65-980F-4291-A4A0-757408E368DC</string>
+	<string>D23DCD5D-CAA0-4793-9145-2E9DA0E3389A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Code example to see how to add an observer for KVO</string>
+	<string>dispatch a block asynchronously to the main queue</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swif KVO Add Observer</string>
+	<string>Swift GCD Async MainQueue</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

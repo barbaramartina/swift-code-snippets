@@ -2,28 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>bmr-addKVOObserver</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>       queue.addObserver(self, forKeyPath: "operations", options: .New, context: nil)
- </string>
+	<string>
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0)) {
+            
+        }
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>28A42D65-980F-4291-A4A0-757408E368DC</string>
+	<string>46B80BFE-C1D4-49EF-AAF4-70BDFD71220C</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>Code example to see how to add an observer for KVO</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swif KVO Add Observer</string>
+	<string>My Code Snippet</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

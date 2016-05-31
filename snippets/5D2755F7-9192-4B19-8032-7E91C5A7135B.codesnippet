@@ -3,37 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>bmr-testAsync</string>
+	<string>bmr-closure</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    func testAsynch() {
-        let expectation = expectationWithDescription("Asynch execution should finish")
-        
-        // Do something asynch and fulfill the expectation when finished
-      
-        
-        waitForExpectationsWithTimeout(10.0) { error in
-            if let e = error {
-                XCTFail("Test did not finish \(e)")
-            } else {
-                XCTAssertTrue(true)
-            }
-        }
-    }
-</string>
+	<string>
+    typealias &lt;#ClosureName#&gt; = (&lt;#arguments#&gt;) -&gt; &lt;#return value#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D64F86B5-5974-47E0-AFBA-903D6C75AB8D</string>
+	<string>5D2755F7-9192-4B19-8032-7E91C5A7135B</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Unit test function with expectations</string>
+	<string>Template declaration for using typealias with a function signature</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift Unit Test Asynchronous</string>
+	<string>Swift Closure Declaration</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

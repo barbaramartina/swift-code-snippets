@@ -3,40 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>bmr-testAsync</string>
+	<string>bmr-gcd-asyncGlobalUtility</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    func testAsynch() {
-        let expectation = expectationWithDescription("Asynch execution should finish")
-        
-        // Do something asynch and fulfill the expectation when finished
-      
-        
-        waitForExpectationsWithTimeout(10.0) { error in
-            if let e = error {
-                XCTFail("Test did not finish \(e)")
-            } else {
-                XCTAssertTrue(true)
-            }
+	<string>
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0)) {
+            
         }
-    }
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D64F86B5-5974-47E0-AFBA-903D6C75AB8D</string>
+	<string>48CB1E9F-3525-4AAB-90EC-2D2AE6A9F546</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Unit test function with expectations</string>
+	<string>dispatch a block to a global queue with QOS Utility</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift Unit Test Asynchronous</string>
+	<string>Swift GCD Async Global Utility</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

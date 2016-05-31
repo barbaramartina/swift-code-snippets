@@ -3,27 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>bmr-addKVOObserver</string>
+	<string>bmr-gcd-asyncGlobalUserInitiated</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>       queue.addObserver(self, forKeyPath: "operations", options: .New, context: nil)
- </string>
+	<string>        
+       dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
+            
+        }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>28A42D65-980F-4291-A4A0-757408E368DC</string>
+	<string>37E5B981-F986-4DF0-B908-79A9E1D963F7</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Code example to see how to add an observer for KVO</string>
+	<string>dispatch a block to the global queue with QOS User Initiated</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swif KVO Add Observer</string>
+	<string>Swift GCD Async Global UserInitiated</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
