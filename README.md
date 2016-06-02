@@ -5,6 +5,9 @@ I've prefixed all my snippets with **bmr-** so can be easily found using autocom
 
 ![autocomplete](https://github.com/barbaramartina/swift-code-snippets/blob/master/docs/autocomplete.png)
 
+I've also included in this repo snippets I found useful from data structures and algorithms available in the [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club).  
+These snippets are prefixed with **swift-ac**.  
+
 
 # Install  
 
