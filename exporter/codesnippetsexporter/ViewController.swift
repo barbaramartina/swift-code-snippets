@@ -34,6 +34,7 @@
 //
 
 import Cocoa
+import Foundation
 
 class ViewController: NSViewController {
 
@@ -50,18 +51,18 @@ class ViewController: NSViewController {
         myOpenDialog.showsHiddenFiles = true
         myOpenDialog.runModal() // select the directory where your snippets are located in your file system
         
-        if let path = myOpenDialog.URL?.path {
+        if let path = myOpenDialog.url?.path {
             
-            let fs: NSFileManager = NSFileManager.defaultManager()
-            let contents: Array = try! fs.contentsOfDirectoryAtPath(path)
+            let fs: FileManager = FileManager.default
+            let contents: Array = try! fs.contentsOfDirectory(atPath: path)
 
             let outputDialog = NSOpenPanel()
             outputDialog.canChooseDirectories = true
             outputDialog.runModal() // select where you would like to export the snippets
             
-            if let outputPath = outputDialog.URL?.path {
+            if let outputPath = outputDialog.url?.path {
                 for fileName in contents {
-                    if (fileName.containsString("codesnippet")) {
+                    if (fileName.contains("codesnippet")) {
                         let fileContent = readDictionaryFromFile("\(path)/\(fileName)")!
                         exportCodeSnippetToYAML(fileContent, path: "\(outputPath)/")
                     }
@@ -70,15 +71,15 @@ class ViewController: NSViewController {
         }
     }
     
-    func readDictionaryFromFile(filePath:String) -> Dictionary<String,AnyObject?>? {
+    func readDictionaryFromFile(_ filePath:String) -> Dictionary<String,AnyObject?>? {
         do {
-            if let data = NSData(contentsOfFile: filePath) {
-                let dict = try NSPropertyListSerialization.propertyListWithData(data, options: .Immutable,format: nil)
+            if let data = try? Data(contentsOf: URL(fileURLWithPath: filePath)) {
+                let dict = try PropertyListSerialization.propertyList(from: data, options: PropertyListSerialization.MutabilityOptions(),format: nil)
                 
-                if let ocDictionary = dict as? NSDictionary {
+                if let ocDictionary = dict as? [String:AnyObject] {
                     var swiftDict : Dictionary<String,AnyObject?> = Dictionary<String,AnyObject?>()
-                    for key : AnyObject in ocDictionary.allKeys{
-                        let stringKey : String = key as! String
+                    for key in ocDictionary.keys {
+                        let stringKey : String = key
                         swiftDict[stringKey] = ocDictionary[stringKey]
                     }
                     return swiftDict
@@ -94,7 +95,7 @@ class ViewController: NSViewController {
     }
     
     
-    func exportCodeSnippetToYAML(snippetDict: Dictionary<String,AnyObject?>, path: String) {
+    func exportCodeSnippetToYAML(_ snippetDict: Dictionary<String,AnyObject?>, path: String) {
         do {
             var text = "---\n"
             
@@ -105,7 +106,7 @@ class ViewController: NSViewController {
                 if let completionShortcut = snippetDict["IDECodeSnippetCompletionPrefix"] as? String {
                     shortCut = completionShortcut
                 } else {
-                    shortCut = title.stringByReplacingOccurrencesOfString(" ", withString: "")
+                    shortCut = title.replacingOccurrences(of: " ", with: "")
                 }
             }
             
@@ -130,15 +131,15 @@ class ViewController: NSViewController {
 
             var ext = ".swift"
             if let language = snippetDict["IDECodeSnippetLanguage"]! {
-                if language.isEqualToString("Xcode.SourceCodeLanguage.ObjectiveC") {
+                if language.isEqual(to: "Xcode.SourceCodeLanguage.ObjectiveC") {
                     ext = ".m"
-                } else if language.isEqualToString("Xcode.SourceCodeLanguage.Objective-C++") {
+                } else if language.isEqual(to: "Xcode.SourceCodeLanguage.Objective-C++") {
                     ext = ".mm"
                 }
             }
             
             
-            try text.writeToFile(path  + shortCut + ext, atomically:true, encoding:NSUTF8StringEncoding)
+            try text.write(toFile: path  + shortCut + ext, atomically:true, encoding:String.Encoding.utf8)
             
         } catch {
             print("error writing file to path: \(path)")
