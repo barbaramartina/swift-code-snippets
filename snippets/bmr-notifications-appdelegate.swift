@@ -22,7 +22,7 @@ summary: Required functions and logic to handle notifications in the app delegat
         let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
         print(deviceTokenString)
         
-        registerNotificationCategories()
+        //TODO: forward token to your servers
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
