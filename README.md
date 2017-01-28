@@ -6,7 +6,7 @@ I've prefixed all my snippets with **bmr-** so can be easily found using autocom
 ![autocomplete](https://github.com/barbaramartina/swift-code-snippets/blob/master/docs/autocomplete.png)
 
 I've also included in this repo snippets I found useful from data structures and algorithms available in the [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club).  
-These snippets are prefixed with **swift-ac**.  
+These snippets are named with **Swift Algorithms Club** at the beginning.  
 
 
 # Install  
@@ -25,7 +25,7 @@ To use the gem you must execute this command (you must have ruby gems already in
 After that, download the snippets in this repo or in any other repo which also offers YAML format (check any of the snippets here as an eample of the format structure).  
 Go to the command line and execute:  
 
-        $ xcodesnippet install path/to/source.swift
+        $ xcodesnippet install path/to/snippet-file.swift
 
 # Create  
 To create your own snippets select your code, drag&drop to the **Snippets Library**, at the bottom of the Utility Panel (at the right).
@@ -35,6 +35,7 @@ To create your own snippets select your code, drag&drop to the **Snippets Librar
 </p>
 
 # Share  
+
 You do not necessarily need to use this repo nor share your snippets here, there are different ways to share them, even not using the YAML format I'm using here.  
 You can find your local snippets going to:  
 
@@ -43,14 +44,23 @@ You can find your local snippets going to:
 And you have different options for sharing.  
 
 ## Simple sharing  
+
 Under the directory above, you'll find files with the extension **.codesnippet**.  
 Just send these files to somebody else, who copy them inside his own `/CodeSnippets` directory.  
 And that's all. 
-Only be careful not to repeat the same identifier for the snippets.  
+Only be careful not to repeat the same identifier for the snippets. 
+The ID can be seen going to 
+
+    ~/Library/Developer/Xcode/UserData/CodeSnippets
+
+<p align=center>
+<img src="https://github.com/barbaramartina/swift-code-snippets/blob/master/docs/snippet-ids.png" >
+</p>
 
 
 ## Sharing with Alcatraz
-You could also share, from *XCode*, using some [Alcatraz](http://alcatraz.io) plugin like [XCSnippetr](https://github.com/dzenbot/XCSnippetr), or adapting [SwiftCodeSnippets](https://github.com/CodeEagle/SwiftCodeSnippets) to use your own repository.   
+*Only older XCode versions*
+~~You could also share, from *XCode*, using some [Alcatraz](http://alcatraz.io) plugin like [XCSnippetr](https://github.com/dzenbot/XCSnippetr), or adapting [SwiftCodeSnippets](https://github.com/CodeEagle/SwiftCodeSnippets) to use your own repository.~~
 
 ## Sharing in this repo  
 
