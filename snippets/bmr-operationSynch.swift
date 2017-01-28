@@ -3,9 +3,7 @@ title: Swift NSOperation Synchronous Subclass
 completion-scope: TopLevel
 summary: Template with docs to implement a non-concurrent subclass of NSOperation
 platform: iphoneos
---- 
-
-
+---
 
 //
 //  MySynchronousOperation.swift
@@ -30,27 +28,24 @@ platform: iphoneos
 
 import Foundation
 
-class MySynchronousOperation: NSOperation {
-    
-    
+class MySynchronousOperation: Operation {
+
+
     override func main() {
-        if self.cancelled {
+        if self.isCancelled {
             return
         }
-        
+
         // do some processing
-        
+
         // cancelled should be checked periodically
         // From Apple Documentation: In particular, your main task code should periodically check the value of the cancelled property. If the property reports the value true, your operation object should clean up and exit as quickly as possible
         // https://developer.apple.com/library/mac/documentation/Cocoa/Reference/NSOperation_class/#//apple_ref/doc/uid/TP40004591-RH2-SW18
-        
-        if self.cancelled {
+
+        if self.isCancelled {
             return
         }
-        
+
         // do more processing
     }
 }
-
-
-
